@@ -69,7 +69,7 @@ export default {
     }
     .doneTodo {
         text-decoration: line-through;
-        cursor: not-allowed;
+        /* cursor: not-allowed; */
         color: gray
     }
 </style>

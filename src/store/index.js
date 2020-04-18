@@ -19,7 +19,6 @@ export default new Vuex.Store({
   },
   mutations: {
     UPDATE_NAME (state, payload) {
-      console.log(payload)
       state.user.name = payload
     },
     PUSH_NAME (state, payload) {
@@ -30,7 +29,11 @@ export default new Vuex.Store({
     },
     UPDATE_TODO (state, data) {
       const todo = state.todos.find( ({ id }) => id === data)
-      todo.status = true
+      if (todo.status === true) {
+        todo.status = false
+      } else {
+        todo.status = true
+      }
     }
   },
   actions: {
